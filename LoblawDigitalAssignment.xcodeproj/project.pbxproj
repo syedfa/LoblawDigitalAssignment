@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		785128A92345CF990022805C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785128A82345CF990022805C /* Extensions.swift */; };
 		787658BD233D8D9300C4616D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787658BC233D8D9300C4616D /* AppDelegate.swift */; };
 		787658BF233D8D9300C4616D /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787658BE233D8D9300C4616D /* ArticleListViewController.swift */; };
 		787658C2233D8D9300C4616D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787658C0233D8D9300C4616D /* Main.storyboard */; };
@@ -17,9 +18,13 @@
 		78B1B0502340120C005261A3 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1B04F2340120C005261A3 /* ArticleViewController.swift */; };
 		78B1B05223404259005261A3 /* ArticleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1B05123404259005261A3 /* ArticleListDataSource.swift */; };
 		78E9B4D62342C2DB00262742 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E9B4D52342C2DB00262742 /* ArticleCell.swift */; };
+		BB4F04BA75E74B4F2FB2BD73 /* Pods_LoblawDigitalAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2516A067A899C2CB35D9F3 /* Pods_LoblawDigitalAssignment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090CD87984E706F15D3CF38E /* Pods-LoblawDigitalAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoblawDigitalAssignment.debug.xcconfig"; path = "Target Support Files/Pods-LoblawDigitalAssignment/Pods-LoblawDigitalAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		5835F506421D8B95384B043D /* Pods-LoblawDigitalAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoblawDigitalAssignment.release.xcconfig"; path = "Target Support Files/Pods-LoblawDigitalAssignment/Pods-LoblawDigitalAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		785128A82345CF990022805C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		787658B9233D8D9300C4616D /* LoblawDigitalAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoblawDigitalAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787658BC233D8D9300C4616D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787658BE233D8D9300C4616D /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		78B1B04F2340120C005261A3 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		78B1B05123404259005261A3 /* ArticleListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListDataSource.swift; sourceTree = "<group>"; };
 		78E9B4D52342C2DB00262742 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		7C2516A067A899C2CB35D9F3 /* Pods_LoblawDigitalAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoblawDigitalAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB4F04BA75E74B4F2FB2BD73 /* Pods_LoblawDigitalAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +57,8 @@
 			children = (
 				787658BB233D8D9300C4616D /* LoblawDigitalAssignment */,
 				787658BA233D8D9300C4616D /* Products */,
+				EF1BF3B3DB9EC373DBE13658 /* Pods */,
+				CCAC2D21BB246FB628AF833B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +73,7 @@
 		787658BB233D8D9300C4616D /* LoblawDigitalAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				785128A82345CF990022805C /* Extensions.swift */,
 				787658BC233D8D9300C4616D /* AppDelegate.swift */,
 				787658CE233D8DF700C4616D /* APIClient.swift */,
 				787658D0233D8EE100C4616D /* Article.swift */,
@@ -79,6 +89,23 @@
 			path = LoblawDigitalAssignment;
 			sourceTree = "<group>";
 		};
+		CCAC2D21BB246FB628AF833B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C2516A067A899C2CB35D9F3 /* Pods_LoblawDigitalAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF1BF3B3DB9EC373DBE13658 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				090CD87984E706F15D3CF38E /* Pods-LoblawDigitalAssignment.debug.xcconfig */,
+				5835F506421D8B95384B043D /* Pods-LoblawDigitalAssignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 787658CB233D8D9600C4616D /* Build configuration list for PBXNativeTarget "LoblawDigitalAssignment" */;
 			buildPhases = (
+				BF475E59330BC8496289E5F7 /* [CP] Check Pods Manifest.lock */,
 				787658B5233D8D9300C4616D /* Sources */,
 				787658B6233D8D9300C4616D /* Frameworks */,
 				787658B7233D8D9300C4616D /* Resources */,
+				BD07C71F45866972595A69D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +174,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BD07C71F45866972595A69D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoblawDigitalAssignment/Pods-LoblawDigitalAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoblawDigitalAssignment/Pods-LoblawDigitalAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoblawDigitalAssignment/Pods-LoblawDigitalAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF475E59330BC8496289E5F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoblawDigitalAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		787658B5233D8D9300C4616D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -153,6 +224,7 @@
 				787658D1233D8EE100C4616D /* Article.swift in Sources */,
 				787658BF233D8D9300C4616D /* ArticleListViewController.swift in Sources */,
 				78B1B0502340120C005261A3 /* ArticleViewController.swift in Sources */,
+				785128A92345CF990022805C /* Extensions.swift in Sources */,
 				787658BD233D8D9300C4616D /* AppDelegate.swift in Sources */,
 				78E9B4D62342C2DB00262742 /* ArticleCell.swift in Sources */,
 				787658CF233D8DF700C4616D /* APIClient.swift in Sources */,
@@ -300,6 +372,7 @@
 		};
 		787658CC233D8D9600C4616D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090CD87984E706F15D3CF38E /* Pods-LoblawDigitalAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +391,7 @@
 		};
 		787658CD233D8D9600C4616D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5835F506421D8B95384B043D /* Pods-LoblawDigitalAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -17,8 +17,8 @@ struct RedditData: Decodable {
     let children: [Child]
 }
 
-struct Child: Decodable {
-    let articleData: ArticleData
+class Child: Decodable {
+    var articleData: ArticleData
     
     enum CodingKeys: String, CodingKey {
         case articleData = "data"
@@ -28,5 +28,30 @@ struct Child: Decodable {
 struct ArticleData: Decodable {
     let title: String
     let url: String
-    //need to add keys to capture imageURL which for some reason is not working.
+    let thumbnail: String
+    let thumbnailHeight: Int?
+    let thumbnailWidth: Int?
+    var downloadedImage: UIImage?
+    var ratio: CGFloat {
+        if let thumbHeight = thumbnailHeight,
+            let thumbWidth = thumbnailWidth,
+            thumbWidth > 0 {
+            return CGFloat(thumbHeight) / CGFloat(thumbWidth)
+        }
+        return 0
+    }
+    
+    var imageHeight: CGFloat {
+        let width = UIScreen.main.bounds.width - 32
+        return width * ratio
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case url
+        case thumbnail
+        case thumbnailHeight = "thumbnail_height"
+        case thumbnailWidth = "thumbnail_width"
+    }
+    
 }

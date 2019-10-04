@@ -45,13 +45,7 @@ class ArticleListDataSource: NSObject, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ArticleCell
         let child = articleArray[indexPath.row]
-        cell.articleTitleLabel.text = child.articleData.title
-        
-        //Unable to parse images right now, so for the time being, simply trying to display the imageView
-        //for the even rows in the tableView.
-        if indexPath.row % 2 == 0 {
-            cell.coverImageView.isHidden = true
-        }
+        cell.setData(child: child)
         
         return cell
     }

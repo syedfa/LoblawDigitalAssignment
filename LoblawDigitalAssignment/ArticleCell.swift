@@ -10,6 +10,8 @@ import UIKit
 
 class ArticleCell: UITableViewCell {
     
+    var imageHeight: NSLayoutConstraint?
+    
     let articleTitleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -21,9 +23,8 @@ class ArticleCell: UITableViewCell {
     
     let coverImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = UIView.ContentMode.scaleAspectFill
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
@@ -55,8 +56,30 @@ class ArticleCell: UITableViewCell {
         stackView.alignment = .leading
         stackView.spacing = 16
         
-        coverImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        coverImageView.clipsToBounds = true
+        imageHeight = coverImageView.heightAnchor.constraint(equalToConstant: 150)
+        imageHeight?.priority = UILayoutPriority(900)
+        imageHeight?.isActive = true
         coverImageView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
+    }
+    
+    func setData(child: Child) {
+        articleTitleLabel.text = child.articleData.title
+        
+        if child.articleData.thumbnail.contains("http") {
+            coverImageView.downloadImage(from: child.articleData.thumbnail, completion: { image in
+                child.articleData.downloadedImage = image
+            })
+            
+            coverImageView.isHidden = false
+            
+            let height = child.articleData.imageHeight
+            if height > 0 {
+                imageHeight?.constant = height
+            }
+        } else {
+            coverImageView.isHidden = true
+        }
     }
     
 }
