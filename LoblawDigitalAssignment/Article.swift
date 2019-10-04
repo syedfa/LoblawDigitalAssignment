@@ -53,5 +53,4 @@ struct ArticleData: Decodable {
         case thumbnailHeight = "thumbnail_height"
         case thumbnailWidth = "thumbnail_width"
     }
-    
 }

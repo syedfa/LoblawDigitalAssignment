@@ -14,10 +14,12 @@ class ArticleListViewController: UITableViewController {
     var articleListDataSource: ArticleListDataSource!
     
     let cellIdentifier = "ArticleCell"
+    let navTitle = "Swift News"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        navigationItem.title = navTitle
         tableView.register(ArticleCell.self, forCellReuseIdentifier: cellIdentifier)
         setupTableView()
     }

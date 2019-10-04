@@ -35,7 +35,11 @@ class ArticleViewController: UIViewController {
         view.backgroundColor = .white
         navigationItem.title = articleData?.title
         
+        setupArticleImageView()
         setupArticleView()
+    }
+    
+    func setupArticleImageView() {
         
         articleImageView.image = articleData?.downloadedImage
         articleImageView.isHidden = articleData?.downloadedImage == nil
@@ -44,7 +48,6 @@ class ArticleViewController: UIViewController {
             let height = UIScreen.main.bounds.width * ratio
             imageHeight?.constant = height
         }
-        
     }
     
     func setupArticleView() {
